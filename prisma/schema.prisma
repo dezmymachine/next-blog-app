@@ -11,9 +11,6 @@ model Question {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   faq       String
   createdAt DateTime @default(now())
-  updateAt  DateTime @default(now())
-  userId    String
-  author    User     @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
 
 model User {
@@ -21,11 +18,12 @@ model User {
   name     String?
   password String
   email    String     @unique
-  question Question[]
+  session Session[]
 }
 
 model Session {
   id        String   @id @map("_id")
   userId    String
   expiresAt DateTime
+  user User @relation(references: [id],fields: [userId],onDelete:Cascade)
 }
