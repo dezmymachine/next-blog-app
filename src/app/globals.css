@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
