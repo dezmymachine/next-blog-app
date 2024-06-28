@@ -18,7 +18,7 @@ model Post {
   title     String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now())
-  image String?
+  image     String?
   content   String
   comments  Comment[]
 }
@@ -39,5 +39,5 @@ model Session {
   id        String   @id @map("_id")
   userId    String
   expiresAt DateTime
-  user User @relation(references: [id], fields: [userId], onDelete: Cascade)
+  user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
