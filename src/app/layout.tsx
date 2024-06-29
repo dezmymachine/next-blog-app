@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/ui/main/nav";
 
 const lato = Lato({
   subsets: ["latin", "latin-ext"],
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>{children}</body>
+      <body className={lato.className}>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

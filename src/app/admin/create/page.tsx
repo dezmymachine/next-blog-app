@@ -1,8 +1,8 @@
-import AddPostForm from "@/components/add-post"
+import AddPostForm from "@/components/ui/admin/add-post";
 export default function Page() {
   return (
     <div>
-      <AddPostForm/>
+      <AddPostForm />
     </div>
-  )
+  );
 }
