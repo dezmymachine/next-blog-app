@@ -1,9 +1,33 @@
+import { prisma } from "@/lib/db";
+import { plusJakarta } from "@/lib/fonts";
+import FeaturedCard from "./featured-card";
 
+let ID = process.env.FEATURED_ID;
+export default async function Featured() {
+  const featured = await prisma.post.findUnique({
+    where: {
+      id: `${ID}`,
+    },
+    select: {
+      title: true,
+      content: true,
+      image: true,
+      createdAt: true,
+    },
+  });
 
-export default function Featured() {
   return (
-    <div>
-      
-    </div>
-  )
+    <main className={`font-sans ${plusJakarta.className}`}>
+      {featured && (
+        <>
+          <FeaturedCard
+            title={featured?.title}
+            content={featured?.content}
+            image={`${featured?.image}`}
+            createdAt={`${featured?.createdAt}`}
+          />
+        </>
+      )}
+    </main>
+  );
 }

@@ -30,7 +30,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="bg-zinc-900 text-white p-5">
+    <nav className="bg-black text-white p-5">
       <div className="flex justify-between items-center">
         <Link href="/" className="font-bold text-xl">
           BLOGO

@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/main/nav";
 
-const lato = Lato({
-  subsets: ["latin", "latin-ext"],
-  weight: ["100", "300", "400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Next Blog App",
@@ -22,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>
+      <body className={plusJakarta.className}>
         <Nav />
         {children}
       </body>

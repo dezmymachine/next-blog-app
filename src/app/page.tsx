@@ -1,9 +1,10 @@
-import Image from "next/image";
+import Featured from "@/components/ui/main/featured";
+
 
 export default function Home() {
   return (
     <main className="">
-      <p>I am a blog site and I will happen soon !</p>
+      <Featured/>
     </main>
   );
 }
