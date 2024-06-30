@@ -41,3 +41,8 @@ model Session {
   expiresAt DateTime
   user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
+
+model Subscribe {
+  id    String @id @map("_id") @db.ObjectId
+  email String
+}

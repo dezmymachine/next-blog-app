@@ -16,7 +16,7 @@ export default function BlogCard({
       </div>
 
       <p className="text-sm text-zinc-600">{createdAt.substring(0, 10)}</p>
-      <p className="font-bold sm:text-xl text-sm line-clamp-1">{title}</p>
+      <p className="font-bold line-clamp-1">{title}</p>
       <p className="text-sm line-clamp-2 leading-5">
         {content.substring(0, 120)}
       </p>

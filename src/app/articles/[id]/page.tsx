@@ -8,10 +8,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     },
   });
   return (
-    <main>
+    <main className="mt-16">
       {post && (
         <BlogPage
-          key={post.id}
+          key={id}
           image={`${post.image}`}
           title={post.title}
           content={post.content}

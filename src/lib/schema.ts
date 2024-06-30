@@ -14,3 +14,8 @@ export const postSchema = z.object({
       "Only .jpg, .jpeg, .png and .webp formats are supported."
     ),
 });
+
+
+export const subscriptionSchema=z.object({
+  email:z.string().email()
+})

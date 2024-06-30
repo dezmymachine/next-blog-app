@@ -1,5 +1,6 @@
 import { feature } from "@/definitions/types";
 import Image from "next/image";
+import CommentForm from "./comment-form";
 
 export default function BlogPage({
   id,
@@ -19,16 +20,17 @@ export default function BlogPage({
           sizes="100vw"
           style={{
             maxWidth: "100%",
-            height: "40dvh",
+            height: "50dvh",
           }}
           className="object-cover"
         />
       </div>
-      <div className="px-5">
-        <h1>{title}</h1>
-        <p>{createdAt.substring(0, 10)}</p>
-        <p>{content}</p>
+      <div className="flex flex-col gap-8">
+        <h1 className="text-xl sm:text-2xl font-bold mt-2">{title}</h1>
+        <p className="text-sm text-zinc-600">{createdAt.substring(0, 10)}</p>
+        <p className="leading-8">{content}</p>
       </div>
+      <CommentForm/>
     </div>
   );
 }
