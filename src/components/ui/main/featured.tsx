@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/db";
-import { plusJakarta } from "@/lib/fonts";
 import FeaturedCard from "./featured-card";
 
 let ID = process.env.FEATURED_ID;
@@ -17,7 +16,7 @@ export default async function Featured() {
   });
 
   return (
-    <main className={`font-sans ${plusJakarta.className}`}>
+    <main>
       {featured && (
         <>
           <FeaturedCard

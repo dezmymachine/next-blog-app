@@ -22,7 +22,7 @@ export default function FeaturedCard({ title, image, createdAt }: feature) {
       ></div>
       <div className="absolute text-center text-white mx-auto max-w-[700px] text-xl px-5 sm:p-0">
         <p>{title}</p>
-        <button className="border-2 p-2 mt-5 border-orange-300 w-44 rounded-lg">
+        <button className="border-2 font-semibold p-1 mt-5 border-orange-300 w-44  hover:bg-orange-300 hover:text-black">
           Read
         </button>
       </div>

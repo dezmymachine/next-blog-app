@@ -3,24 +3,18 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import menuIcon from "../../../../public/menu.svg";
+import closeIcon from "../../../../public/close.svg";
+import { navLinks } from "@/lib/links";
 import git from "../../../../public/github.svg";
 import gmail from "../../../../public/gmail.svg";
 import lnkdn from "../../../../public/lnkdn.svg";
-import menuIcon from "../../../../public/menu.svg";
-import closeIcon from "../../../../public/close.svg";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Articles", href: "/articles" },
-  { label: "Contact", href: "/contact" },
-];
-
-const socials = [
+export const socials = [
   { href: "https://github.com/dezmymachine", src: git },
   { href: "https://www.linkedin.com/in/desmond-coffie-606607181", src: lnkdn },
   { href: "mailto:desmondkwakucoffie195@gmail.com", src: gmail },
 ];
-
 export default function Nav() {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
