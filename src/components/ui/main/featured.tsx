@@ -24,6 +24,7 @@ export default async function Featured() {
             content={featured?.content}
             image={`${featured?.image}`}
             createdAt={`${featured?.createdAt}`}
+            id={`${ID}`}
           />
         </>
       )}

@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-black text-white">
-        <div className="p-5">
+        <div className="px-5 py-10">
           <div className="flex items-center space-x-2">
             <ul className="flex items-center space-x-3">
               {navLinks.map((link) => (

@@ -3,4 +3,5 @@ export type feature = {
   content: string;
   image: string;
   createdAt: string;
+  id?: string;
 };
