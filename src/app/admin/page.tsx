@@ -5,8 +5,8 @@ import { prisma } from "@/lib/db";
 export default async function page() {
   const posts = await prisma.post.findMany();
   return (
-    <div>
-      <h3>All Posts</h3>
+    <div className="min-h-screen py-20 px-10">
+      <h3 className="">All Posts</h3>
       {posts &&
         posts.map((post, index) => (
           <div key={post.id} className="flex items-center gap-x-2">

@@ -43,9 +43,11 @@ export const createPost = async (
         image: imageUrl,
       },
     });
+    return { message: "Post created successfully" };
   } catch (error) {
     return { message: "Failed to create post" };
+  } finally {
+    revalidatePath("/admin");
+    redirect("/admin");
   }
-  revalidatePath("/admin");
-  redirect("/admin");
 };

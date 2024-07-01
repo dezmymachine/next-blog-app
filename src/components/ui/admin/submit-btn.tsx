@@ -1,4 +1,6 @@
 'use client'
+import Image from "next/image";
+import loadIcon from "../../../../public/loading.svg"
 import { useFormStatus } from "react-dom";
 export default function SubmitBtn() {
   const { pending, data } = useFormStatus();
@@ -6,13 +8,17 @@ export default function SubmitBtn() {
     <div>
       <button
         aria-disabled={pending}
-        className="bg-orange-500 text-white p-2 font-bold disabled:bg-slate-300"
+        className="bg-orange-500 text-white p-2 sm:p-2.5 sm:w-32 font-bold disabled:bg-slate-300"
       >
-        Submit
+        {pending ? (
+          <div className="flex gap-2">
+            <Image src={loadIcon} alt="loading" width={20} height={20} />
+            <p className="text-sm">Sending</p>
+          </div>
+        ) : (
+          "Submit"
+        )}
       </button>
-      <p className=" text-green-700 font-bold text-xl">
-        {data ? `Sending ...` : ""}
-      </p>
     </div>
   );
 }

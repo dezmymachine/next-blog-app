@@ -43,6 +43,7 @@ model Session {
 }
 
 model Subscribe {
-  id    String @id @map("_id") @db.ObjectId
-  email String
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+  createdAt DateTime @default(now())
 }

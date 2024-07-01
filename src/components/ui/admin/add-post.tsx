@@ -10,7 +10,7 @@ export default function AddPostForm() {
   const [state, formAction] = useFormState(createPost, initialState);
   return (
     <>
-      <div className="p-3">
+      <div className="py-20 px-10 min-h-screen">
         <h1>Add Post</h1>
         <form action={formAction} className="flex flex-col max-w-lg gap-y-2">
           <label htmlFor="title" className="">

@@ -14,14 +14,14 @@ export default function FeaturedCard({ title, image, id }: feature) {
           sizes="100vw"
           style={{
             maxWidth: "100%",
-            height: "80dvh",
+            height: "50dvh",
           }}
           className="object-cover"
         />
       </div>
       <div
         className="h-full w-full bg-black opacity-70 absolute"
-        style={{ height: "70dvh" }}
+        style={{ height: "50dvh" }}
       ></div>
       <div className="absolute text-center text-white mx-auto max-w-[700px] text-xl px-5 sm:p-0">
         <Link href={`/articles/${id}`}>

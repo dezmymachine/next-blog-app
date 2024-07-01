@@ -27,7 +27,7 @@ export default function Nav() {
     <nav className="bg-black text-white p-5 fixed w-full z-20">
       <div className="flex justify-between items-center">
         <Link href="/" className="font-bold text-xl">
-          BLOGO
+          BLOG
         </Link>
         <div className="sm:hidden">
           <button onClick={toggleNav}>
