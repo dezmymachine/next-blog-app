@@ -22,7 +22,7 @@ export default function BlogCard({
       </p>
       <Link
         href={`/articles/${id}`}
-        className="font-semibold p-1 text-white mt-2 bg-orange-500 w-1/3  hover:bg-orange-300 hover:text-black text-center"
+        className="font-semibold p-1 text-white mt-2 bg-orange-500 w-1/3  hover:bg-orange-400 text-center"
       >
         Read
       </Link>

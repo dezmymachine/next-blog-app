@@ -24,7 +24,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="bg-black text-white p-5 fixed w-full z-20">
+    <nav className="bg-black text-white px-10 py-5 fixed w-full z-20">
       <div className="flex justify-between items-center">
         <Link href="/" className="font-bold text-xl">
           BLOG
@@ -39,14 +39,14 @@ export default function Nav() {
             />
           </button>
         </div>
-        <ul className="hidden sm:flex sm:items-center sm:space-x-3">
+        <ul className="hidden sm:flex sm:items-center sm:text-xl sm:gap-x-8">
           {navLinks.map((link) => (
             <li key={link.label} className="font-semibold">
               <Link
                 href={link.href}
                 className={`${
                   pathname === link.href
-                    ? "border-2 border-orange-300 border-x-0 border-t-0 pb-1 opacity-85"
+                    ? "border-4 border-orange-500 border-x-0 border-t-0 pb-1 opacity-95"
                     : ""
                 }`}
               >

@@ -4,7 +4,10 @@ import { feature } from "@/definitions/types";
 
 export default function FeaturedCard({ title, image, id }: feature) {
   return (
-    <div className="flex flex-col items-center justify-center overflow-hidden" style={{ height: "70dvh" }}>
+    <div
+      className="flex flex-col items-center justify-center overflow-hidden"
+      style={{ height: "70dvh" }}
+    >
       <div className="">
         <Image
           src={image}
@@ -25,7 +28,7 @@ export default function FeaturedCard({ title, image, id }: feature) {
       ></div>
       <div className="absolute text-center text-white mx-auto max-w-[700px] text-xl px-5 sm:p-0">
         <Link href={`/articles/${id}`}>
-          <p className="sm:text-2xl font-bold">{title}</p>
+          <p className="sm:text-2xl font-bold hover:text-orange-500">{title}</p>
         </Link>
       </div>
     </div>

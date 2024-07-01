@@ -50,7 +50,18 @@ export function ArticleSkeleton() {
     </div>
   );
 }
-
+export function ArticlePageSkeleton() {
+  return (
+    <div className={`${shimmer} min-h-screen bg-slate-200`}>
+      <div className={`w-full h-50dvh ${shimmer}`} />
+      <div className={`flex flex-col gap-8 px-4 py-2 ${shimmer}`}>
+        <div className={`h-16 ${shimmer}`} />
+        <div className={`h-6 ${shimmer}`} />
+        <div className={`h-24 ${shimmer}`} />
+      </div>
+    </div>
+  );
+}
 export function FeatureCardSkeleton() {
   return (
     <div

@@ -5,7 +5,7 @@ export default async function BlogGrid() {
   const posts = await prisma.post.findMany();
   return (
     <article className="">
-      <div className="flex justify-center items-center gap-x-2  p-5">
+      <div className="flex justify-between items-center px-5">
         <p className="font-bold text-xl">Trending posts</p>
         <Link href="/articles" className="text-orange-500 font-bold">
           View more &gt;&gt;

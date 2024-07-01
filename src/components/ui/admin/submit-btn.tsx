@@ -8,7 +8,7 @@ export default function SubmitBtn() {
     <div>
       <button
         aria-disabled={pending}
-        className="bg-orange-500 text-white p-2 sm:p-2.5 sm:w-32 font-bold disabled:bg-slate-300"
+        className="bg-orange-500 hover:bg-orange-400 text-white p-2 sm:p-2.5 sm:w-32 font-bold disabled:bg-slate-300"
       >
         {pending ? (
           <div className="flex gap-2">

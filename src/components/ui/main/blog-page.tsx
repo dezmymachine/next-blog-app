@@ -1,8 +1,9 @@
 import { feature } from "@/definitions/types";
 import Image from "next/image";
+import { prisma } from "@/lib/db";
 import CommentForm from "./comment-form";
 
-export default function BlogPage({
+export default async function BlogPage({
   id,
   title,
   image,
