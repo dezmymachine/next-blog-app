@@ -1,17 +1,16 @@
 import { prisma } from "@/lib/db";
 import FeaturedCard from "./featured-card";
-
+import { FeaturedBlog } from "@/definitions/types";
 let ID = process.env.FEATURED_ID;
 export default async function Featured() {
-  const featured = await prisma.post.findUnique({
+  const featured: FeaturedBlog | null = await prisma.post.findUnique({
     where: {
       id: `${ID}`,
     },
     select: {
       title: true,
-      content: true,
       image: true,
-      createdAt: true,
+      id: true,
     },
   });
 
@@ -20,10 +19,8 @@ export default async function Featured() {
       {featured && (
         <>
           <FeaturedCard
-            title={featured?.title}
-            content={featured?.content}
-            image={`${featured?.image}`}
-            createdAt={`${featured?.createdAt}`}
+            title={featured.title}
+            image={featured.image}
             id={`${ID}`}
           />
         </>

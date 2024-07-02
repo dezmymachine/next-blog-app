@@ -12,4 +12,10 @@ export type Blog = {
   image: string | null;
   createdAt: Date;
   id: string;
-}
+};
+
+export type FeaturedBlog = {
+  title: string;
+  image: string | null;
+  id: string;
+};

@@ -3,7 +3,7 @@ import Image from "next/image";
 import loadIcon from "../../../../public/loading.svg"
 import { useFormStatus } from "react-dom";
 export default function SubmitBtn() {
-  const { pending, data } = useFormStatus();
+  const { pending } = useFormStatus();
   return (
     <div>
       <button

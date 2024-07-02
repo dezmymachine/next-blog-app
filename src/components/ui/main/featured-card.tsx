@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { feature } from "@/definitions/types";
+import { FeaturedBlog } from "@/definitions/types";
 
-export default function FeaturedCard({ title, image, id }: feature) {
+export default function FeaturedCard({ title, image, id }: FeaturedBlog) {
   return (
     <div
       className="flex flex-col items-center justify-center overflow-hidden"
@@ -10,7 +10,7 @@ export default function FeaturedCard({ title, image, id }: feature) {
     >
       <div className="">
         <Image
-          src={image}
+          src={image || ""}
           alt={title}
           width={1500}
           height={500}

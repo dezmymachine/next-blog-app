@@ -1,8 +1,9 @@
 import BlogCard from "./blog-card";
 import Link from "next/link";
+import { Blog } from "@/definitions/types";
 import { prisma } from "../../../lib/db";
 export default async function BlogGrid() {
-  const posts = await prisma.post.findMany();
+  const posts: Blog[] = await prisma.post.findMany();
   return (
     <article className="">
       <div className="flex justify-between items-center px-5">
@@ -13,7 +14,7 @@ export default async function BlogGrid() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-y-10  lg:grid-cols-3">
-        {posts.map((post) => (
+        {posts.map((post: Blog) => (
           <div className="p-5" key={post.id}>
             <BlogCard
               title={post.title}
