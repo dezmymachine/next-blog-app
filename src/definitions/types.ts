@@ -5,3 +5,11 @@ export type feature = {
   createdAt: string;
   id?: string;
 };
+
+export type Blog = {
+  title: string;
+  content: string;
+  image: string | null;
+  createdAt: Date;
+  id: string;
+}
