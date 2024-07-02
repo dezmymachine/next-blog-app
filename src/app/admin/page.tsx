@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { prisma } from "@/lib/db";
-import { feature } from "@/definitions/types";
+
 
 export default async function page() {
   const posts = await prisma.post.findMany();
